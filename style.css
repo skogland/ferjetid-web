@@ -221,6 +221,59 @@ a:hover {
   opacity: 0.8;
 }
 
+/* --- Screenshot Gallery --- */
+.screenshots {
+  padding: var(--space-3xl) 0 var(--space-4xl);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.screenshots-scroll {
+  display: flex;
+  gap: var(--space-xl);
+  justify-content: center;
+  padding: 0 var(--space-xl);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.screenshots-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshots-scroll img {
+  flex-shrink: 0;
+  height: 500px;
+  width: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  scroll-snap-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .screenshots-scroll img {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 640px) {
+  .screenshots {
+    padding: var(--space-2xl) 0 var(--space-3xl);
+  }
+
+  .screenshots-scroll {
+    justify-content: flex-start;
+    padding: 0 var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .screenshots-scroll img {
+    height: 400px;
+  }
+}
+
 /* --- Section --- */
 .section {
   padding: var(--space-4xl) var(--space-xl);
