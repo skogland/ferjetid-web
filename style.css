@@ -159,11 +159,20 @@ a:hover {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-text);
   text-decoration: none;
   letter-spacing: -0.02em;
+}
+
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
 }
 
 .nav-logo:hover {
